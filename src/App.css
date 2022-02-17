@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+body {
+  height: 731px;
+  user-select: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  background: linear-gradient(to bottom, #af67e9 0%, #6565e7 100%);
+  display: flex;
+  justify-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  height: 100%;
+}
+
+.frame {
+  background-color: rgb(245, 245, 245);
+  width: 90%;
+  margin-top: 70px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  padding-bottom: 30px;
+  margin-bottom: 60px;
+}
+
+.illus {
+  position: relative;
+  top: -65px;
+  width: 150px;
+}
+
+.illus-shadow {
+  top: -110px;
+}
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -50px;
+}
+.box {
+  display: none;
+}
+
+.faq_question_section {
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+
+.faq_section {
+  width: 90%;
+  border-bottom: 1px solid rgba(6, 22, 32, 0.46);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.faq_question::after {
+  content: url("./faq-accordion-card-main/images/icon-arrow-down.svg");
+  display: inline-block;
+  transform: rotate(90deg);
+  transition: transform 300ms;
+}
+
+.faq_question:hover {
+  color: hsl(14, 88%, 65%);
+  cursor: pointer;
+}
+
+.font-weight-bold::after {
+  transform: rotate(360deg);
+}
+
+.faq_question {
+  font-size: 12px;
+}
+
+.font-weight-bold {
+  font-weight: 700;
+}
+
+.faq_answer {
+  margin-top: 2px;
+  position: relative;
+
+  height: 0;
+  visibility: hidden;
+  font-size: 12px;
+}
+.shown {
+  margin-top: 5px;
+  height: 2rem;
+  visibility: visible;
+}
+
+@media only screen and (min-width: 1440px) {
+  .frame {
+    flex-direction: row;
+    max-width: 60%;
+    gap: 50px;
+    max-height: 80%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .faqs {
+    top: 0;
+    margin-left: -260px;
+  }
+
+  .faq__title {
+    justify-items: flex-start;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 30px;
+    margin-bottom: 20px;
+  }
+  .illus {
+    top: 0%;
+    width: 400px;
+    left: -80px;
+    z-index: 1;
+  }
+  .illus-shadow {
+    top: 140px;
+    left: -390px;
+    z-index: 0;
+    transform: scale(1.5);
+    
+    
+  }
+}
